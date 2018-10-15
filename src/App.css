@@ -13,6 +13,18 @@
   color: #EDF2F4;
 }
 
+.App-nav-item > a {
+  /* GRAY-BLUE */
+  /*color: #8D99AE !important;*/
+  /* ANTI-FLASH WHITE */
+  color: #EDF2F4;
+}
+
+.App-nav-item > a:hover {
+  /* GRAY-BLUE */
+  color: #8D99AE !important;
+}
+
 .App-icon {
   margin: 0 10px;
 }
