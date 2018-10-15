@@ -1,3 +1,30 @@
+Home Automation Web Front-End
+=============================
+
+This is a web app to control a harmony hub - I created this as I found the official android app to be a bit slow to start up.
+
+Setup
+=====
+
+In one terminal:
+
+    git clone https://github.com/silleknarf/harmony-api
+    cd harmony-api
+    yarn install
+    ./script/server
+
+In another terminal:
+    
+    git clone https://github.com/silleknarf/home
+    cd home
+    yarn install
+    yarn run
+
+Then open [http://localhost:3000/](http://localhost:3000/) in a browser
+
+Create React App Info
+=====================
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

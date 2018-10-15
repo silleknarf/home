@@ -6,9 +6,8 @@ import {
   Navbar,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink } from 'reactstrap';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+  NavItem } from 'reactstrap';
+import { BrowserRouter as Switch, Route, Link } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
