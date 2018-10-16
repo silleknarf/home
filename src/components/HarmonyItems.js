@@ -26,15 +26,14 @@ class HarmonyItems extends Component {
 
   onStart(harmonyItem) {
     console.log(`Starting ${this.props.harmonyName}: ${harmonyItem.label}`);
-    // eslint-disable-next-line 
     const harmonyPostUrl = `http://localhost:8282/hubs/harmony-hub/${this.props.harmonyName}/${harmonyItem.slug}`;
-    //fetch(harmonyPostUrl, { method: "POST" });
+    fetch(harmonyPostUrl, { method: "POST" });
   }
 
   render() {
     const harmonyItems = this.state.harmonyItems
-      .map(a => (
-        <ListGroupItem className="App-list-item" key={a.id}>
+      .map((a, index) => (
+        <ListGroupItem className="App-list-item" key={index}>
           {a.label}
           <span className="App-icon">
             <FontAwesomeIcon icon="play" size="2x" onClick={() => this.onStart(a)} />

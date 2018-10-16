@@ -8,9 +8,21 @@
 
 .App-nav {
   /* RED (PANTONE) */
-  background-color: #EF233C;
+  /*color: #EF233C;*/
   /* ANTI-FLASH WHITE */
   color: #EDF2F4;
+  /* GUNMETAL */
+  background-color: #2B2D42;
+}
+
+.App-title {
+  margin: 5px;
+  font-size: x-large;
+}
+
+.App-nav .badge {
+  margin: 5px;
+  display: block;
 }
 
 .App-nav-item > a {
