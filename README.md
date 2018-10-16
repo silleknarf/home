@@ -3,6 +3,21 @@ Home Automation Web Front-End
 
 This is a web app to control a harmony hub - I created this as I found the official android app to be a bit slow to start up.
 
+Features
+=======
+
+ - [x] View activities
+ - [x] View devices
+ - [x] View currently available commands
+ - [x] View hub status
+ - [x] Run activity
+ - [x] Run available command
+ - [x] Setup tutorial
+ - [] Run command for any device
+ - [] Display running command/activity
+ - [] Display status without refresh
+ - [] Deployment tutorial
+ 
 Setup
 =====
 
