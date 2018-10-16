@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import Activities from "./Activities";
-import Devices from "./Devices";
+import HarmonyItems from "./HarmonyItems";
 import './App.css';
 import {
   Navbar,
   NavbarBrand,
   Nav,
   NavItem } from 'reactstrap';
-import { BrowserRouter as Switch, Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -16,7 +15,10 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 library.add(faPlay)
 
 class App extends Component {
+
   render() {
+    const activities = () => <HarmonyItems harmonyName="activities"></HarmonyItems>;
+    const devices = () => <HarmonyItems harmonyName="devices"></HarmonyItems>;
     return (
       <div className="App">
         <Navbar className="App-nav" expand="md">
@@ -32,11 +34,9 @@ class App extends Component {
             </NavItem>
           </Nav>
         </Navbar>
-        <Switch>
-          <Route exact path='/' component={Activities} />
-          <Route exact path='/activities' component={Activities} />
-          <Route exact path='/devices' component={Devices} />
-        </Switch>
+        <Route exact path='/' component={activities} />
+        <Route exact path='/activities' component={activities} />
+        <Route exact path='/devices' component={devices} />
       </div>
     );
   }
