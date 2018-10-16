@@ -25,8 +25,9 @@ In one terminal:
 
     git clone https://github.com/silleknarf/harmony-api
     cd harmony-api
-    yarn install
-    ./script/server
+    [sudo] npm install forever -g
+    ./script/bootstrap
+    ./script/start
 
 In another terminal:
     
@@ -36,6 +37,14 @@ In another terminal:
     yarn run
 
 Then open [http://localhost:3000/](http://localhost:3000/) in a browser
+
+Deployment
+==========
+
+1. Set up a raspberry pi or your preferred minimal computing environment on your local network.
+1. sudo apt-get purge --autoremove npm nodejs
+1. https://www.instructables.com/id/Install-Nodejs-and-Npm-on-Raspberry-Pi/
+1. Set up the app as described above
 
 Create React App Info
 =====================

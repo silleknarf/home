@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
 import { Badge } from 'reactstrap';
+import { harmonyApiBaseUrl } from '../config';
 
 class Status extends Component {
 
@@ -11,7 +11,7 @@ class Status extends Component {
   }
 
   componentDidMount() {
-      const harmonyUrl = `http://localhost:8282/hubs/harmony-hub/status`;
+      const harmonyUrl = `${harmonyApiBaseUrl}/hubs/harmony-hub/status`;
       fetch(harmonyUrl)
         .then(response => response.json())
         .then(data => {

@@ -6,6 +6,7 @@ import {
 
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { harmonyApiBaseUrl } from '../config';
 
 class HarmonyItems extends Component {
 
@@ -16,7 +17,7 @@ class HarmonyItems extends Component {
   }
 
   componentDidMount() {
-      const harmonyUrl = `http://localhost:8282/hubs/harmony-hub/${this.props.harmonyName}`;
+      const harmonyUrl = `${harmonyApiBaseUrl}/hubs/harmony-hub/${this.props.harmonyName}`;
       fetch(harmonyUrl)
         .then(response => response.json())
         .then(data => {
@@ -26,7 +27,7 @@ class HarmonyItems extends Component {
 
   onStart(harmonyItem) {
     console.log(`Starting ${this.props.harmonyName}: ${harmonyItem.label}`);
-    const harmonyPostUrl = `http://localhost:8282/hubs/harmony-hub/${this.props.harmonyName}/${harmonyItem.slug}`;
+    const harmonyPostUrl = `${harmonyApiBaseUrl}/hubs/harmony-hub/${this.props.harmonyName}/${harmonyItem.slug}`;
     fetch(harmonyPostUrl, { method: "POST" });
   }
 
