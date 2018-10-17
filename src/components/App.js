@@ -21,8 +21,9 @@ class App extends Component {
 
   render() {
     const start = () => <Start />;
+    const openDeviceCommands = () => <OpenDeviceCommands />;
     const activities = () => <HarmonyItems harmonyName="activities" rowControl={start}></HarmonyItems>;
-    const devices = () => <HarmonyItems harmonyName="devices" rowControl={start}></HarmonyItems>;
+    const devices = () => <HarmonyItems harmonyName="devices" rowControl={openDeviceCommands}></HarmonyItems>;
     const commands = () => <HarmonyItems harmonyName="commands" rowControl={start}></HarmonyItems>;
     return (
       <div className="App">
@@ -45,7 +46,8 @@ class App extends Component {
         <Route exact path='/' component={activities} />
         <Route exact path='/activities' component={activities} />
         <Route exact path='/devices' component={devices} />
-        <Route path='/commands/:deviceSlug?' component={commands} />
+        <Route exact path='/commands' component={commands} />
+        <Route path='/devices/:deviceSlug/commands' component={commands} />
       </div>
     );
   }
