@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HarmonyItems from "./HarmonyItems";
 import Status from "./Status";
+import Start from "./Start";
 import './App.css';
 import {
   Navbar,
@@ -19,9 +20,10 @@ library.add(faPowerOff);
 class App extends Component {
 
   render() {
-    const activities = () => <HarmonyItems harmonyName="activities"></HarmonyItems>;
-    const devices = () => <HarmonyItems harmonyName="devices"></HarmonyItems>;
-    const commands = () => <HarmonyItems harmonyName="commands"></HarmonyItems>;
+    const start = () => <Start />;
+    const activities = () => <HarmonyItems harmonyName="activities" rowControl={start}></HarmonyItems>;
+    const devices = () => <HarmonyItems harmonyName="devices" rowControl={start}></HarmonyItems>;
+    const commands = () => <HarmonyItems harmonyName="commands" rowControl={start}></HarmonyItems>;
     return (
       <div className="App">
         <Navbar className="App-nav" expand="md">
@@ -43,7 +45,7 @@ class App extends Component {
         <Route exact path='/' component={activities} />
         <Route exact path='/activities' component={activities} />
         <Route exact path='/devices' component={devices} />
-        <Route exact path='/commands' component={commands} />
+        <Route path='/commands/:deviceSlug?' component={commands} />
       </div>
     );
   }

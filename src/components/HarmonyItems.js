@@ -5,7 +5,6 @@ import {
   ListGroupItem } from 'reactstrap';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { harmonyApiBaseUrl } from '../config';
 
 class HarmonyItems extends Component {
@@ -25,20 +24,14 @@ class HarmonyItems extends Component {
         })
   }
 
-  onStart(harmonyItem) {
-    console.log(`Starting ${this.props.harmonyName}: ${harmonyItem.label}`);
-    const harmonyPostUrl = `${harmonyApiBaseUrl}/hubs/harmony-hub/${this.props.harmonyName}/${harmonyItem.slug}`;
-    fetch(harmonyPostUrl, { method: "POST" });
-  }
-
   render() {
     const harmonyItems = this.state.harmonyItems
-      .map((a, index) => (
+      .map((hi, index) => (
+        const RowControl = this.props.rowControl;
         <ListGroupItem className="App-list-item" key={index}>
-          {a.label}
-          <span className="App-icon">
-            <FontAwesomeIcon icon="play" size="2x" onClick={() => this.onStart(a)} />
-          </span>
+          {hi.label}
+          <RowControl harmonyItem={hi}
+                      harmonyName={this.props.harmonyName} />
         </ListGroupItem>));
 
     return (
