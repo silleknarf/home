@@ -26,18 +26,24 @@ class HarmonyItems extends Component {
 
   render() {
     const harmonyItems = this.state.harmonyItems
-      .map((hi, index) => (
-        const RowControl = this.props.rowControl;
-        <ListGroupItem className="App-list-item" key={index}>
-          {hi.label}
-          <RowControl harmonyItem={hi}
-                      harmonyName={this.props.harmonyName} />
-        </ListGroupItem>));
+      .map((hi, index) => {
+        const rowControl = React.cloneElement(
+          this.props.rowControl,
+          { 
+            harmonyItem: hi,
+            harmonyName: this.props.harmonyName 
+          });
+        return (
+          <ListGroupItem className="App-list-item" key={index}>
+            {hi.label}
+            { rowControl }
+          </ListGroupItem>);
+      });
 
     return (
-        <ListGroup> 
-          { harmonyItems }
-        </ListGroup>);
+      <ListGroup> 
+        { harmonyItems }
+      </ListGroup>);
   }
 }
 

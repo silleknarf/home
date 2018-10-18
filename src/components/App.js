@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HarmonyItems from "./HarmonyItems";
 import Status from "./Status";
 import Start from "./Start";
+import OpenDeviceCommands from "./OpenDeviceCommands";
 import './App.css';
 import {
   Navbar,
@@ -12,16 +13,17 @@ import { Route, Link } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faPlay, faPowerOff } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPowerOff, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faPlay);
 library.add(faPowerOff);
+library.add(faArrowRight)
 
 class App extends Component {
 
   render() {
-    const start = () => <Start />;
-    const openDeviceCommands = () => <OpenDeviceCommands />;
+    const start = <Start />;
+    const openDeviceCommands = <OpenDeviceCommands />;
     const activities = () => <HarmonyItems harmonyName="activities" rowControl={start}></HarmonyItems>;
     const devices = () => <HarmonyItems harmonyName="devices" rowControl={openDeviceCommands}></HarmonyItems>;
     const commands = () => <HarmonyItems harmonyName="commands" rowControl={start}></HarmonyItems>;
