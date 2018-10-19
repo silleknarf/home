@@ -14,6 +14,7 @@ import { Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPlay, faPowerOff, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { harmonyApiBaseUrl } from '../config';
 
 library.add(faPlay);
 library.add(faPowerOff);
@@ -29,7 +30,12 @@ class App extends Component {
     const devices = () => <HarmonyItems harmonyName="devices" rowControl={openDeviceCommands}></HarmonyItems>;
     const commands = () => <HarmonyItems harmonyName="commands" rowControl={start}></HarmonyItems>;
     const deviceCommandsHarmonyRouteProvider = (props) => `${harmonyApiBaseUrl}/hubs/harmony-hub/devices/${props.match.params.deviceSlug}/commands`;
-    const deviceCommands = () l=> <HarmonyItems harmonyName="commands" rowControl={start}></HarmonyItems>;
+    const deviceCommands = (props) => (
+      <HarmonyItems harmonyName="commands" 
+                    rowControl={start} 
+                    harmonyRouteProvider={deviceCommandsHarmonyRouteProvider}
+                    { ...props }>
+      </HarmonyItems>);
     return (
       <div className="App">
         <Navbar className="App-nav" expand="md">
@@ -52,7 +58,7 @@ class App extends Component {
         <Route exact path='/activities' component={activities} />
         <Route exact path='/devices' component={devices} />
         <Route exact path='/commands' component={commands} />
-        <Route path='/devices/:deviceSlug/commands' component={commands} />
+        <Route path='/devices/:deviceSlug/commands' component={deviceCommands} />
       </div>
     );
   }

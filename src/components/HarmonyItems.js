@@ -17,7 +17,7 @@ class HarmonyItems extends Component {
 
   componentDidMount() {
     const harmonyUrl = this.props.harmonyRouteProvider
-        ? harmonyRouteProvider(this.props)  
+        ? this.props.harmonyRouteProvider(this.props)  
         : `${harmonyApiBaseUrl}/hubs/harmony-hub/${this.props.harmonyName}`;
     fetch(harmonyUrl)
       .then(response => response.json())
