@@ -16,10 +16,12 @@ class HarmonyItems extends Component {
   }
 
   componentDidMount() {
-      const harmonyUrl = `${harmonyApiBaseUrl}/hubs/harmony-hub/${this.props.harmonyName}`;
-      fetch(harmonyUrl)
-        .then(response => response.json())
-        .then(data => {
+    const harmonyUrl = this.props.harmonyRouteProvider
+        ? harmonyRouteProvider(this.props)  
+        : `${harmonyApiBaseUrl}/hubs/harmony-hub/${this.props.harmonyName}`;
+    fetch(harmonyUrl)
+      .then(response => response.json())
+      .then(data => {
           this.setState({ harmonyItems: data[this.props.harmonyName] });
         })
   }

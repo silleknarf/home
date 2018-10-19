@@ -24,9 +24,12 @@ class App extends Component {
   render() {
     const start = <Start />;
     const openDeviceCommands = <OpenDeviceCommands />;
+    
     const activities = () => <HarmonyItems harmonyName="activities" rowControl={start}></HarmonyItems>;
     const devices = () => <HarmonyItems harmonyName="devices" rowControl={openDeviceCommands}></HarmonyItems>;
     const commands = () => <HarmonyItems harmonyName="commands" rowControl={start}></HarmonyItems>;
+    const deviceCommandsHarmonyRouteProvider = (props) => `${harmonyApiBaseUrl}/hubs/harmony-hub/devices/${props.match.params.deviceSlug}/commands`;
+    const deviceCommands = () l=> <HarmonyItems harmonyName="commands" rowControl={start}></HarmonyItems>;
     return (
       <div className="App">
         <Navbar className="App-nav" expand="md">
