@@ -1,1 +1,1 @@
-export const harmonyApiBaseUrl = "http://localhost:8282";
+export const harmonyApiBaseUrl = "http://home.local:8282";

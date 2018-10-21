@@ -14,9 +14,9 @@ Features
  - [x] Run available command
  - [x] Setup tutorial
  - [x] Run command for any device
+ - [x] Deployment tutorial
  - [ ] Display running command/activity
  - [ ] Display status without refresh
- - [ ] Deployment tutorial
  
 Setup
 =====
@@ -44,7 +44,9 @@ Deployment
 1. Set up a raspberry pi or your preferred minimal computing environment on your local network.
 1. sudo apt-get purge --autoremove npm nodejs
 1. https://www.instructables.com/id/Install-Nodejs-and-Npm-on-Raspberry-Pi/
-1. Set up the app as described above
+1. Set up the app as described above (use tmux to have two terminal sessions that run indefinitely on the pi)
+1. Change the hostname on the raspberry pi to home using this guide: https://www.howtogeek.com/167190/how-and-why-to-assign-the-.local-domain-to-your-raspberry-pi/
+1. Access the website on your local network using the domain: home.local/
 
 Create React App Info
 =====================
