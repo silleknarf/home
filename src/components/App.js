@@ -31,11 +31,11 @@ class App extends Component {
     const commands = () => <HarmonyItems harmonyName="commands" rowControl={start}></HarmonyItems>;
     const deviceCommandsHarmonyRouteProvider = (props) => `${harmonyApiBaseUrl}/hubs/harmony-hub/devices/${props.match.params.deviceSlug}/commands`;
     const deviceCommands = (props) => (
-      <HarmonyItems harmonyName="commands" 
-                    rowControl={start} 
-                    harmonyRouteProvider={deviceCommandsHarmonyRouteProvider}
-                    { ...props }>
-      </HarmonyItems>);
+        <HarmonyItems harmonyName="commands" 
+                      rowControl={start} 
+                      harmonyRouteProvider={deviceCommandsHarmonyRouteProvider}
+                      { ...props }>
+        </HarmonyItems>);
     return (
       <div className="App">
         <Navbar className="App-nav" expand="md">

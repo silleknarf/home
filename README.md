@@ -13,7 +13,7 @@ Features
  - [x] Run activity
  - [x] Run available command
  - [x] Setup tutorial
- - [ ] Run command for any device
+ - [x] Run command for any device
  - [ ] Display running command/activity
  - [ ] Display status without refresh
  - [ ] Deployment tutorial
