@@ -33,8 +33,8 @@ In another terminal:
     
     git clone https://github.com/silleknarf/home
     cd home
-    yarn install
-    yarn run
+    npm install
+    npm run start
 
 Then open [http://localhost:3000/](http://localhost:3000/) in a browser
 
