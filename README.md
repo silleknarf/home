@@ -46,7 +46,7 @@ Deployment
 1. https://www.instructables.com/id/Install-Nodejs-and-Npm-on-Raspberry-Pi/
 1. Set up the app as described above (use tmux to have two terminal sessions that run indefinitely on the pi)
 1. Change the hostname on the raspberry pi to home using this guide: https://www.howtogeek.com/167190/how-and-why-to-assign-the-.local-domain-to-your-raspberry-pi/
-1. Access the website on your local network using the domain: home.local/
+1. Access the website on your local network using the domain: home.local:3000/
 
 Create React App Info
 =====================
