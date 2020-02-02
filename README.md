@@ -3,6 +3,8 @@ Home Automation Web Front-End
 
 This is a web app to control a harmony hub - I created this as I found the official android app to be a bit slow to start up.
 
+![Screenshot](https://raw.githubusercontent.com/silleknarf/home/master/screenshot.png "Screenshot")
+
 Features
 =======
 
