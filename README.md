@@ -3,10 +3,12 @@ Home Automation Web Front-End
 
 This is a web app to control a harmony hub - I created this as I found the official android app to be a bit slow to start up.
 
-![Screenshot](https://raw.githubusercontent.com/silleknarf/home/master/screenshot.png "Screenshot")
+Screenshot
+----------
+<img src="https://raw.githubusercontent.com/silleknarf/home/master/screenshot.png" width="400" alt="Screenshot">
 
 Features
-=======
+--------
 
  - [x] View activities
  - [x] View devices
@@ -21,7 +23,7 @@ Features
  - [ ] Display status without refresh
  
 Setup
-=====
+-----
 
 In one terminal:
 
@@ -41,7 +43,7 @@ In another terminal:
 Then open [http://localhost:3000/](http://localhost:3000/) in a browser
 
 Deployment
-==========
+----------
 
 1. Set up a raspberry pi or your preferred minimal computing environment on your local network.
 1. sudo apt-get purge --autoremove npm nodejs
